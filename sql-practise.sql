@@ -9,44 +9,5 @@ create table student(
 );
 insert into student 
 values
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (101, "adam", 39),
 (102, "john", 40);
