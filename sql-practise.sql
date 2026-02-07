@@ -1,9 +1,13 @@
-CREATE DATABASE college;
-CREATE DATABASE xyz_company;
-DROP DATABASE xyz_company;
-USE college;
-CREATE TABLE student(
-   rollno INT,
-   name VARCHAR(30),
-   age INT
+create database college;
+create database xyz_company;
+drop database xyz_company;
+use college;
+create table student(
+   rollno int,
+   name varchar(30),
+   age int
 );
+insert into student 
+values
+(101, "adam", 39);
+(102, "john", 40);
