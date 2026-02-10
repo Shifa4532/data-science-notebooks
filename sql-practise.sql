@@ -39,4 +39,3 @@ values
 (108, "bob", "mumbai", 65),
 (124, "casey", "pune", 80);
    
-   
