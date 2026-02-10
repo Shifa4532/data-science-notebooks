@@ -38,4 +38,6 @@ values
 (110, "adam", "delhi", 76),
 (108, "bob", "mumbai", 65),
 (124, "casey", "pune", 80);
+select * from student
+where marks > 75;
    
