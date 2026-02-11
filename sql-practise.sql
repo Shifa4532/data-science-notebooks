@@ -129,3 +129,7 @@ where Salary between 4000 and 7000;
 select * from employee
 where FirstName like 'A%';
 
+select Department, count(*) as NumEmployees
+from employee
+group by Department
+having count(*) > 3;
