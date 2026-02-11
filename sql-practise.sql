@@ -40,4 +40,27 @@ values
 (124, "casey", "pune", 80);
 select * from student
 where marks > 75;
-   
+
+select city, max(marks)
+from student
+group by city;
+select avg(marks) from student;
+
+alter table student
+add column grade varchar(2);
+
+set sql_safe_updates = 0;
+
+update student
+set grade = "O"
+where marks >= 80;
+
+update student
+set grade = "A"
+where marks >= 70 and marks < 80;
+
+update student
+set grade = "B"
+where marks >= 60 and marks < 70;
+
+select * from student;
