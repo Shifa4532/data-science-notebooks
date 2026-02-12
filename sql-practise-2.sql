@@ -19,11 +19,43 @@ insert into accounts (name, balance) values
 select * from accounts;
 
 start transaction;
-
 update accounts set balance = balance - 50 where id = 1;
 update accounts set balance = balance + 50 where id = 2;
+rollback;
 
-commit;
+
+create table customers (
+    cust_id int primary key,
+    name varchar(50),
+    city varchar(50)
+);
+
+insert into customers values
+(1, 'alice', 'mumbai'),
+(2, 'bob', 'delhi'),
+(3, 'charlie', 'bangalore'),
+(4, 'davide', 'mumbai');
+
+create table orders (
+   order_id int primary key,
+   cust_id int,
+   amount int
+);
+
+insert into orders values
+(101, 1, 500),
+(102, 1, 900),
+(103, 2, 300),
+(104, 5, 700);
+
+select * from customers;
+select * from orders;
+
+   
+
+
+
+
 
 
 
