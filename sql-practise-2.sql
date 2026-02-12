@@ -51,7 +51,10 @@ insert into orders values
 select * from customers;
 select * from orders;
 
-   
+select c.cust_id, o.order_id, c.name
+from customers c
+inner join orders o
+on c.cust_id = o.cust_id;
 
 
 
