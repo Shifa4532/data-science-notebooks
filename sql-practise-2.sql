@@ -19,10 +19,11 @@ insert into accounts (name, balance) values
 select * from accounts;
 
 start transaction;
-update accounts set balance = balance - 50 where id = 1;
-update accounts set balance = balance + 50 where id = 2;
-rollback;
-
+update accounts set balance = balance - 1000 where id = 1;
+savepoint after_wallet_topup;
+update accounts set balance = balance + 10 where id = 1;
+rollback to after_wallet_topup;
+commit;
 
 create table customers (
     cust_id int primary key,
@@ -55,23 +56,3 @@ select c.cust_id, o.order_id, c.name
 from customers c
 inner join orders o
 on c.cust_id = o.cust_id;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
