@@ -1,6 +1,45 @@
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
 .ipynb_checkpoints/
+.virtual_documents/
+
+# Anaconda
+anaconda_projects/
+anaconda_upload/
+
+# Python cache
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+
+# VS Code
 .vscode/
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data
 *.csv
+*.xlsx
+*.xls
+*.parquet
+
+# Models
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.h5
+
+# Logs
+*.log
